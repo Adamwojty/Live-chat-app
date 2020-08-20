@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { BrowserRouter } from "react-router-dom";
+import { GlobalStyle } from "./config/GlobalStyle/GlobalStyle";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Routing from "./config/routes/Routing";
+import Login from "./components/Auth/Login";
+import { Wrapper, AppWrapper } from "./App.styles";
+import { store } from "./config/Store/store";
 
-function App() {
+const App: React.FC = () => {
+  const data = React.useContext(store);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <GlobalStyle />
+      <BrowserRouter>
+        {!data.user ? (
+          <Login />
+        ) : (
+          <AppWrapper>
+            <Routing />
+            <Sidebar />
+          </AppWrapper>
+        )}
+      </BrowserRouter>
+    </Wrapper>
   );
-}
+};
 
 export default App;
