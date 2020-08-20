@@ -5,11 +5,12 @@ import { Routes } from "./routes";
 const Routing: React.FC = () => {
   return (
     <Switch>
-      <Route exact path={Routes.APP}></Route>
-      <Route path={Routes.ROOM}>
-        <Chat />
+      <Route exact path={Routes.ROOM}>
+        <Chat empty={false} />
       </Route>
-      <Route path={Routes.LOGIN}></Route>
+      <Route path={Routes.BASE}>
+        <Chat empty={true} />
+      </Route>
     </Switch>
   );
 };

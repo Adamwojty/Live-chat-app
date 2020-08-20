@@ -1,5 +1,5 @@
 export enum Routes {
-  LOGIN = "/",
+  BASE = "/",
   APP = "/rooms/",
   ROOM = "/rooms/:roomId",
 }
