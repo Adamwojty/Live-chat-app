@@ -1,6 +1,7 @@
 ## Live
 
-<a href="https://livechat-6a4e3.web.app/">Live Chat App</a>
+<a href="https://livechat-6a4e3.web.app/" target="blank" rel="noopener noreferer">Live
+Chat App</a>
 
 ## Stack
 

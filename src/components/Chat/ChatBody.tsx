@@ -4,14 +4,14 @@ import { store } from "../../config/Store/store";
 type ChatProps = {
   messages: any | [];
 };
-type MessageType = {
+interface MessageType {
   name: string;
   timestamp: {
     toDate(): Date;
   };
   message: string;
   userImg: string;
-};
+}
 const ChatBody: React.FC<ChatProps> = ({ messages }) => {
   const { user } = React.useContext(store);
   return (

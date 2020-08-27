@@ -14,3 +14,6 @@ export enum Colors {
   PARAGRAPH = "#fffffe",
   PARAGRAPH2 = "#5f6c7b",
 }
+export enum Media {
+  MOBILE_L = "(max-width: 700px)",
+}

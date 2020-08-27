@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "../../config/styles";
+import { Colors, Media } from "../../config/styles";
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
@@ -8,6 +8,9 @@ export const Wrapper = styled.div`
   height: 39px;
   border-top: 1px solid ${Colors.STROKE};
   border-bottom: 1px solid ${Colors.STROKE};
+  @media ${Media.MOBILE_L} {
+    display: none;
+  }
 `;
 export const SearchContainer = styled.div`
   display: flex;

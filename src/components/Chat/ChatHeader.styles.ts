@@ -1,10 +1,15 @@
 import styled from "styled-components";
-import { Colors } from "../../config/styles";
+import { Colors, Media } from "../../config/styles";
 export const Wrapper = styled.div`
   padding: 20px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid ${Colors.STROKE};
+  button {
+    @media ${Media.MOBILE_L} {
+      display: none;
+    }
+  }
 `;
 export const Info = styled.div`
   flex: 1;
@@ -15,5 +20,8 @@ export const Info = styled.div`
   }
   p {
     color: ${Colors.PARAGRAPH2};
+    @media ${Media.MOBILE_L} {
+      display: none;
+    }
   }
 `;
